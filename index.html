@@ -38,33 +38,49 @@
       height= "300">
 
       
+      
       <!-- User input -->
   
         <!-- Number guess textbox -->        
        
         <!-- <p>Guess number here:</p> -->
 
-        <td>
-					<h3>Guess your number here:</h3>
-					<form action="javascript:display_greeting()">						
-						<label for="number">Number:</label>
-						<input type="number" step="1" min="1" max="6" id="hour" placeholder="Enter number (1-6)"><br><br>
-						<input type="submit" value="Display greeting">
-					</form>
-				</td>
-      
 
-        <p>
-          <div id="display-results">
-            <div id="greeting">
-            </div>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              step="1"
+              min="1"
+              max="6"
+              id="Guessed-number-here"
+            />
+            <label class="mdl-textfield__label" for="Guessed-number-here">Numbers go here...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
-        </p>
+
+
+              <!-- Button -->
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="javascript:displayGreeting ()">
+          <p>Check results</p>
+        </button>
+        <br />
+        <p>
+          <div id="greeting">
+
+          </div> 
+
       </main>
     </div>
   </body>
 </html>
 
+<!--
+          <div id="display-results">
+            <div id="greeting">
+            </div>
+          </div>
+-->
 <!--           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
@@ -85,3 +101,21 @@
           <p>Compare numbers</p>
         </button>
         <br /> -->
+
+
+
+      <!--        <td>
+					<h3>Guess your number here:</h3>
+					<form action="javascript:displayGreeting()">						
+						<label for="number">Number:</label>
+						<input type="number" step="1" min="1" max="6" id="Guessed-number-here" placeholder="Enter number (1-6)"><br><br>
+						<input type="submit" value="Display greeting">
+					</form>
+				</td>
+      
+
+        <p>
+          <div id="greeting">
+          </div>
+        </p>
+      -->
