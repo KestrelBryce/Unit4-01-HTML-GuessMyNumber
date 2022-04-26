@@ -2,25 +2,21 @@
 */
 
 function displayGreeting () {
-    // initilize variables
-  let greeting = ""
 
     // user input
-  let Guessed_number = parseInt((document.getElementById('Guessed-number-here').value));
+  let guessedNumber = parseInt((document.getElementById('Guessed-number-here').value));
 
     // variables
-  let Correct_number = Math.floor((Math.random() * 6) + 1);
+  let correctNumber = Math.floor((Math.random() * 6) + 1);
   
-    // formula????
-  if (Guessed_number == Correct_number) {
-    greeting = "Correct!"
+    // formulas
+  if (guessedNumber == correctNumber) {
+    document.getElementById("greeting").innerHTML = "Your guess was " + guessedNumber + ", and the correct number was " + correctNumber + ". You guessed correctly, good job!"
   }
-  // alternate formula
-  else {
-    greeting = "Incorrect"
+    // alternate formula
+  if (guessedNumber != correctNumber) {
+    document.getElementById("greeting").innerHTML = "Your guess was " + guessedNumber + ", and the correct number was " + correctNumber + ". You guessed incorrectly, better luck next time!"
   }
-
-  document.getElementById("greeting").innerHTML = Guessed_number + " is your number, " + Correct_number
 
   
   // output for numbers guessed correctly
